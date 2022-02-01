@@ -36,8 +36,7 @@ const checkSquareValid = (x, y, number, checkWhiteSquare) => {
   )
     isSquareValid = true
 
-  //check if hoz center
-  //check if vert center
+  //check if hori center
   if (
     x - 1 >= 0 &&
     x + 1 < number &&
