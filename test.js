@@ -10,8 +10,7 @@ const isCrossword = (number, checkWhiteSquare) => {
     //Loop through y axis
     for (let y = 0; y < number; y++) {
       if (
-        !checkSquareValid(x, y, number, checkWhiteSquare) &&
-        !checkWhiteSquare(rotatedX, rotatedY)
+        !checkSquareValid(x, y, number, checkWhiteSquare)
       )
         return false
     }
@@ -21,6 +20,11 @@ const isCrossword = (number, checkWhiteSquare) => {
 
 const checkSquareValid = (x, y, number, checkWhiteSquare) => {
   let isSquareValid = false
+
+  const rotatedX = number - (x + 1)
+  const rotatedY = number - (y + 1)
+  if(!checkWhiteSquare(rotatedX, rotatedY)
+     return isSquareValid
   
   //check if vert center
   if (
