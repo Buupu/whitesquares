@@ -8,7 +8,7 @@ const isCrossword = (number, checkWhiteSquare) => {
   //Only need to loop through half the x axis
   for (let x = 0; x < lengthOfHalfTheBoard; x++) {
     //Loop through y axis
-    for (let y = 0; y < number; y++) {
+    for (let y = 0; y < number - 1; y++) {
       if (
         !checkSquareValid(x, y, number, checkWhiteSquare)
       )
