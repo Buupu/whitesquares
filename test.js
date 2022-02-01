@@ -1,11 +1,9 @@
 const isCrossword = (number, checkWhiteSquare) => {
-  //Check if the diagonal length is even
-  const isBoardEven = number % 2
-
-  const lengthOfHalfTheBoard = number / 2
 
   //Board must be at least 3x3
   if (!number < 3) return false
+
+  const lengthOfHalfTheBoard = number / 2
 
   //Only need to loop through half the x axis
   for (let x = 0; x < lengthOfHalfTheBoard; x++) {
