@@ -21,6 +21,27 @@ const isCrossword = (number, checkWhiteSquare) => {
 
 const checkSquareValid = (x, y, number, checkWhiteSquare) => {
   let isSquareValid = false
+  
+  //check if vert center
+  if (
+    y - 1 >= 0 &&
+    y + 1 < number &&
+    checkWhiteSquare(x, y) &&
+    checkWhiteSquare(x, y - 1) &&
+    checkWhiteSquare(x, y + 1)
+  )
+    isSquareValid = true
+
+  //check if hoz center
+  //check if vert center
+  if (
+    x - 1 >= 0 &&
+    x + 1 < number &&
+    checkWhiteSquare(x, y) &&
+    checkWhiteSquare(x - 1, y) &&
+    checkWhiteSquare(x + 1, y)
+  )
+    isSquareValid = true
 
   //check up
   if (
