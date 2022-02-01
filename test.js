@@ -1,7 +1,7 @@
 const isCrossword = (number, checkWhiteSquare) => {
 
-  //Board must be at least 3x3
-  if (!number < 3) return false
+  //Board must be at least 5x5
+  if (number < 5) return false
 
   const lengthOfHalfTheBoard = number / 2
 
